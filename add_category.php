@@ -17,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $unique_file_name = uniqid('category_photo_', true) . '.' . $file_extension;
     $target_file = $target_dir . $unique_file_name;
 
-    // Validate the file type (for example, only allow images)
     $allowed_file_types = ['jpg', 'jpeg', 'png', 'gif'];
     if (!in_array(strtolower($file_extension), $allowed_file_types)) {
         die("Error: Only image files (jpg, jpeg, png, gif) are allowed.");
